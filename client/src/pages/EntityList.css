@@ -1,0 +1,338 @@
+.entity-page {
+  max-width: 800px;
+}
+
+.entity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.entity-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.entity-btn-add {
+  padding: 0.5rem 1rem;
+  background: var(--accent);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.entity-btn-add:hover {
+  background: var(--accent-hover);
+}
+
+.entity-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.entity-form input,
+.entity-form select {
+  padding: 0.5rem 0.75rem;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-primary);
+  width: 100%;
+  max-width: 400px;
+}
+
+.entity-form-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 400px;
+}
+
+.entity-form-field-group select {
+  width: 100%;
+}
+
+.entity-btn-inline {
+  padding: 0.5rem 0.75rem;
+  background: transparent;
+  border: 1px dashed var(--border);
+  border-radius: 6px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.entity-btn-inline:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.entity-inline-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 400px;
+  padding: 0.75rem;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin-top: 0.25rem;
+}
+
+.entity-inline-form input {
+  width: 100%;
+}
+
+.entity-inline-form button {
+  padding: 0.5rem 1rem;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.entity-inline-form button:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.entity-inline-form button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.entity-form button[type='submit'] {
+  padding: 0.5rem 1rem;
+  background: var(--accent);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+.entity-error {
+  width: 100%;
+  padding: 0.5rem;
+  background: rgba(239, 68, 68, 0.15);
+  border-radius: 6px;
+  color: #fca5a5;
+  font-size: 0.9rem;
+}
+
+.entity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.entity-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.entity-item-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.entity-item-main strong {
+  font-size: 1rem;
+}
+
+.entity-item-main span {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.entity-item-value {
+  color: var(--success) !important;
+}
+
+.entity-item-stage {
+  text-transform: capitalize;
+  color: var(--accent) !important;
+}
+
+.entity-item-meta {
+  font-size: 0.85rem !important;
+  opacity: 0.9;
+}
+
+.entity-item-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.entity-btn-edit {
+  padding: 0.35rem 0.75rem;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.entity-btn-edit:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.entity-btn-delete {
+  padding: 0.35rem 0.75rem;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.entity-btn-delete:hover {
+  border-color: var(--error);
+  color: var(--error);
+}
+
+.entity-empty {
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+/* Edit modal - right side panel */
+.entity-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+  animation: entity-modal-fade 0.2s ease;
+}
+
+@keyframes entity-modal-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.entity-modal-panel {
+  width: 100%;
+  max-width: 420px;
+  height: 100%;
+  background: var(--bg-secondary);
+  border-left: 1px solid var(--border);
+  box-shadow: -4px 0 24px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+  animation: entity-modal-slide 0.25s ease;
+}
+
+@keyframes entity-modal-slide {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.entity-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.entity-modal-header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.entity-modal-close {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  color: var(--text-secondary);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.entity-modal-close:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.entity-form-modal {
+  margin: 0;
+  padding: 1.5rem;
+  border: none;
+  border-radius: 0;
+}
+
+.entity-form-modal input,
+.entity-form-modal select {
+  max-width: none;
+}
+
+.entity-form-modal .entity-form-field-group {
+  max-width: none;
+}
+
+.entity-form-modal .entity-inline-form {
+  max-width: none;
+}
+
+.entity-modal-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.entity-modal-actions button[type='submit'] {
+  flex: 1;
+}
+
+.entity-btn-cancel {
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.entity-btn-cancel:hover {
+  border-color: var(--text-secondary);
+  color: var(--text-primary);
+}
+
+.entity-loading {
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-secondary);
+}

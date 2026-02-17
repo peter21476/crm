@@ -1,0 +1,117 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+}
+
+.layout-logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.layout-logo:hover {
+  text-decoration: none;
+  color: var(--accent);
+}
+
+.layout-nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.layout-nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.layout-nav a:hover,
+.layout-nav a.active {
+  color: var(--text-primary);
+}
+
+.layout-user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.layout-email {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.layout-logout {
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.layout-logout:hover {
+  background: var(--bg-tertiary);
+  border-color: var(--text-secondary);
+}
+
+.layout-main {
+  flex: 1;
+  padding: 1.5rem;
+}
+
+.dashboard h1 {
+  margin: 0 0 0.5rem;
+  font-size: 1.75rem;
+}
+
+.dashboard-welcome {
+  margin: 0 0 2rem;
+  color: var(--text-secondary);
+}
+
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.dashboard-card {
+  padding: 1.5rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.dashboard-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.dashboard-card p {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.dashboard-card-link {
+  font-size: 0.9rem;
+  color: var(--accent);
+}
+
+.dashboard-card-link:hover {
+  text-decoration: underline;
+}
